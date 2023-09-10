@@ -1,0 +1,93 @@
+h1, h2, p{
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #FF4500; 
+    text-align: center;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif; 
+    color: #FF4500; 
+    text-align: left;
+}
+h5{
+  font-family: Arial, Helvetica, sans-serif; 
+  color: #333; 
+  text-align: left;
+}
+
+body{
+    background-color: white;
+}
+
+button {
+  padding: 10px;
+  background-color: white; 
+  border: #FF4500;
+  border-radius: 2%; 
+}
+
+.all-content{
+    width: 80%;
+    display: block; 
+    margin: 10%; 
+    border: 5cm;
+    border: 2px solid #333;
+    border-radius: 2%;
+}
+
+.results{
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.whole-scale{
+  justify-content: center; 
+}
+.container-dial {
+  background-color: rgb(192, 192, 192);
+  width: 100%;
+  border-radius: 5px;
+  border-color:#FF4500
+}
+.skill {
+  background-color: rgb(98, 105, 118);
+  color: white;
+  padding: 1%;
+  text-align: right;
+  font-size: 20px;
+  border-radius: 5px;
+  border-color: #FF4500;
+}
+
+.php {
+  border-color: #FF4500;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 2%;
+  }
+  
+  li {
+    float: left;
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif; 
+
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }

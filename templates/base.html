@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <title>{% block title%} {% endblock %}</title>
+    
+</head>
+<body>
+    <!--navigation bar-->
+    <div class = "all-content">
+      <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href={{url_one}}>Subreddit Analysis</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href={{url_two}}>Post Analysis</a>
+          </li>
+        </ul>
+      
+      
+        <h1>{{content}}</h1>
+        {% block content%} {% endblock %}
+      
+      <div class = "results">
+          <h3>MEAN: {{sentiment_mean}}</h3>
+          <h5>1 indicates the most positive sentiment; -1 indicates the most negative sentiment</h5>
+          <!--
+          <div class = "whole-scale">
+            <div class="container-dial">
+              <div id = "result" class="skill php">{{sentiment_mean}}</div>
+            </div>
+          </div>
+          -->
+          <h3>{{title1}}</h3>
+          {% for x in neg_headlines: %}
+            <h5>{{x}}</h5>
+          {% endfor %}
+    
+          <h3>{{title2}}</h3>
+          {% for x in pos_headlines: %}
+              <h5>{{x}}</h5> 
+          {% endfor %}
+      </div>
+
+  </div>
+
+    <!---
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>-->
+
+    <script>
+      var element = document.getElementsByClassName("php");
+      element.style.width = element.innerHTML;
+      console.log(element.innerHTML);
+    </script>
+</body>
+</html>
